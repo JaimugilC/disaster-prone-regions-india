@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+    $('area').on('click', function (e) {
+      $(this.href).show().siblings().hide();
+    });
+  </script>
+  <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+  <div class="tabset">
+    <!-- Tab 1 -->
+    <input type="radio" name="tabset" id="tab1" aria-controls="overall" checked />
+    <label for="tab1">Overall View</label>
+    <!-- Tab 2 -->
+    <input type="radio" name="tabset" id="tab2" aria-controls="cyclone" />
+    <label for="tab2">Cyclone Prone Regions</label>
+    <!-- Tab 3 -->
+    <input type="radio" name="tabset" id="tab3" aria-controls="earthquake" />
+    <label for="tab3">Earthquake Prone Regions</label>
+    <!-- Tab 4 -->
+    <input type="radio" name="tabset" id="tab4" aria-controls="flood" />
+    <label for="tab4">Flood Prone Regions</label>
+    <!-- Tab 5 -->
+    <input type="radio" name="tabset" id="tab5" aria-controls="heatwave" />
+    <label for="tab5">Heatwave Prone Regions</label>
+    <!-- Tab 6 -->
+    <input type="radio" name="tabset" id="tab6" aria-controls="landslide" />
+    <label for="tab6">Landslide Prone Regions</label>
+
+    <div class="tab-panels">
+      <section id="overall" class="tab-panel">
+        <div class="maparea-overall">
+          <img class="mapimg" src="overall.png" alt="overall" />
+        </div>
+      </section>
+      <section id="cyclone" class="tab-panel">
+        <div class="cyclone-div">
+          <div class="maparea-cyclone">
+            <img class="mapimg" src="cyclone.jpg" alt="cyclone" usemap="#cyclonemap" />
+            <map name="cyclonemap">
+              <area shape="rect" coords="860,663,452,1074" href="cyclone/cycloneeast.html">
+              <area shape="rect" coords="524,1124,385,1288" href="cyclone/tamilnadu.html">
+              <area shape="rect" coords="247,622,31,786" href="cyclone/gujarat.html">
+            </map>
+          </div>
+        </div>
+      </section>
+      <section id="earthquake" class="tab-panel">
+        <div class="maparea-earthquake">
+          <img class="mapimg" src="earthquake.jpg" alt="earthquake" usemap="#earthquakemap" />
+          <map name="earthquakemap">
+            <area shape="rect" coords="1198,389,1004,703" href="earthquake/northeast.html">
+            <area shape="rect" coords="459,11,271,227" href="earthquake/north.html">
+          </map>
+        </div>
+      </section>
+      <section id="flood" class="tab-panel">
+        <div class="maparea-flood">
+          <img class="mapimg" src="flood.jpg" alt="flood" usemap="#floodmap" />
+          <map name="floodmap">
+            <area shape="rect" coords="886,480,464,579" href="flood/northeast.html">
+            <area shape="rect" coords="860,663,452,1074" href="flood/eastcoast.html">
+            <area shape="rect" coords="247,622,31,786" href="flood/westcoast.html">
+          </map>
+        </div>
+      </section>
+      <section id="heatwave" class="tab-panel">
+        <div class="maparea-heatwave">
+          <img class="mapimg" src="heatwave.png" alt="heatwave" usemap="#heatwavemap" />
+          <map name="heatwavemap">
+            <area shape="rect" coords="156,150,510,468" href="heatwave/heatwave.html">
+          </map>
+        </div>
+      </section>
+      <section id="landslide" class="tab-panel">
+        <div class="maparea-landslide">
+          <img class="mapimg" src="landslide.jpg" alt="landslide" usemap="#landslidemap" />
+          <map name="landslidemap">
+            <area shape="rect" coords="1198,389,1004,703" href="landslide/northeast.html">
+            <area shape="rect" coords="459,11,271,227" href="landslide/north.html">
+          </map>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
